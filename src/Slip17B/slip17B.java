@@ -1,4 +1,4 @@
-package Slip17B;
+//package Slip17B;
 import java.sql.*;
 import java.awt.*;
 import java.awt.event.*;
