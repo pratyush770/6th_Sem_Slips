@@ -1,4 +1,4 @@
-package Slip26A;
+//package Slip26A;
 public class slip26A
 {
     public static void main(String[] args)
