@@ -1,11 +1,12 @@
 import java.util.*;
-class MyThread2 extends Thread
+class MyThread2 implements Runnable
 {
     int n1;
+    Thread t = null;
     MyThread2(int n)
     {
+        t = new Thread(this);
         n1 = n;
-        start();
     }
     @Override
     public void run()
@@ -35,6 +36,6 @@ public class slip4A
         System.out.print("Enter the number of times you want to execute : ");
         int n = sc.nextInt();
         MyThread2 ob = new MyThread2(n);
-
+        ob.t.start();
     }
 }
