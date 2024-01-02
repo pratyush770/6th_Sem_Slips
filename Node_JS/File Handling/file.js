@@ -5,7 +5,7 @@ const fs = require("fs"); // file system module which is in-built
 
 
 // synchronous call for writing data into file
-// fs.writeFileSync("./test.txt","This is my first created file");   // creates a file named test.txt with the entered data
+//fs.writeFileSync("./test.txt","This is my first created file");   // creates a file named test.txt with the entered data
 
 // asynchronous call for writing data into file
 // fs.writeFile("./demo.txt","This is my second created file",(err)=>{});
