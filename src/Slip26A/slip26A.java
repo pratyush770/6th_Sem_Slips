@@ -1,7 +1,13 @@
 //package Slip26A;
-public class slip26A
+class slip26Thread extends Thread
 {
-    public static void main(String[] args)
+    slip26Thread()
+    {
+        start();
+    }
+
+    @Override
+    public void run()
     {
         try
         {
@@ -16,5 +22,13 @@ public class slip26A
         {
             System.out.println(e.getMessage());
         }
+    }
+}
+
+public class slip26A
+{
+    public static void main(String[] args)
+    {
+        slip26Thread ob = new slip26Thread();
     }
 }
