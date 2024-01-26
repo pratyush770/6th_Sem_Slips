@@ -7,17 +7,36 @@
    
 </head>
 <body>
+    <%@ page import="java.sql.*"%>
+    <%@ page import="java.io.*"%>
     <%
-    String n1 = request.getParameter("n1");
+    int n1 = Integer.parseInt(request.getParameter("n1"));
     String n2 = request.getParameter("n2");
     String n3 = request.getParameter("n3");
     String n4 = request.getParameter("n4");
     String n5 = request.getParameter("n5");
-    out.println("The roll number of the student is : " + n1 + "<br>");
-    out.println("The name of the student is : " + n2 + "<br>");
-    out.println("The gender of the student is : " + n3 + "<br>");
-    out.println("The computer knowledge of the student is : " + n4 + "<br>");
-    out.println("The class of the student is : " + n5);
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    String url = "jdbc:mysql://localhost:3306/mydatabase";
+    String uname = "root";
+    String pwd = "matsumoto";
+    Connection con = DriverManager.getConnection(url,uname,pwd);
+    String q = "insert into student2 values(?,?,?,?,?)";
+    PreparedStatement pst = con.prepareStatement(q);
+    pst.setInt(1,n1);
+    pst.setString(2,n2);
+    pst.setString(3,n3);
+    pst.setString(4,n4);
+    pst.setString(5,n5);
+    pst.executeUpdate();
+    q = "select * from student2";
+    ResultSet rs = pst.executeQuery(q);
+    out.println("<table border=1>");
+    out.println("<th>Roll Number" + "<th>Student Name" + "<th>Gender" + "<th>Computer Knowledge" + "<th>Class");
+    while(rs.next())
+    {
+        out.println("<tr><td>" + rs.getInt(1) + "<td>" + rs.getString(2) + "<td>" + rs.getString(3) + "<td>" + rs.getString(4) + "<td>" + rs.getString(5) + "</tr>");
+    }
+    out.println("</table>");
     %>
 </body>
 </html>

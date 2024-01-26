@@ -9,13 +9,27 @@
     <form action="http://localhost:8080/JspSlips/slip23A.jsp">
         <h2>Enter roll number : <input type="text" name="n1"></h2>
         <h2>Enter student name : <input type="text" name="n2"></h2>
-        <label for="gender">Select gender : </label>
-        <select name="n3">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select>
-        <h2>Enter computer knowledge : <input type="text" name="n4"></h2>
-        <h2>Enter class : <input type="text" name="n5"></h2>
+        <label>Select gender : </label>
+        <input type="radio" name="n3" value="Male">Male
+        <input type="radio" name="n3" value="Female">Female 
+        <br> <br>
+        <label>Select computer knowledge : </label> 
+        <br> <br>
+        <input type="checkbox" name="n4" value="Level-1">Level-1 Basic Programming 
+        <br>
+        <input type="checkbox" name="n4" value="Level-2">Level-2 Intermediate Programming 
+        <br>
+        <input type="checkbox" name="n4" value="Level-3">Level-3 Advanced Programming 
+        <br> <br>
+        <label>Select class : </label>
+        <select name="n5">
+            <option value="Fail">Fail</option>
+            <option value="Pass">Pass</option>
+            <option value="First Class">First Class</option>
+            <option value="Second Class">Second Class</option>
+            <option value="Third Class">Third Class</option>
+        </select> 
+        <br> <br>
         <input type="submit" value="Display">
     </form>
 </body>
