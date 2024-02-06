@@ -24,7 +24,7 @@ public class slip9A
 		ResultSet rs = st.executeQuery(q);
 		while(rs.next())
 		{
-			System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3));
+			System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3) + " " + rs.getString(4));
 		}
 	}
 }

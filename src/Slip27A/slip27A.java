@@ -8,7 +8,7 @@ public class slip27A
 		String username = "root";
 		String password = "matsumoto";
 		Connection con = DriverManager.getConnection(database,username,password);
-		String q = "delete from emp where EmpId = ?";
+		String q = "delete from emp where eid = ?";
 		PreparedStatement pst = con.prepareStatement(q);
 		int eid =Integer.parseInt(args[0]);
 		pst.setInt(1,eid);

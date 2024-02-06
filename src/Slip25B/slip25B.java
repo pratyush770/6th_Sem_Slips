@@ -5,8 +5,8 @@ import java.awt.event.*;
 import javax.swing.*;
 public class slip25B extends JFrame implements ActionListener
 {
-    JLabel l1,l2,l3;
-    JTextField t1,t2,t3;
+    JLabel l1,l2,l3,l4;
+    JTextField t1,t2,t3,t4;
     JButton b1,b2,b3,b4;
     ResultSet rs;
     Connection con;
@@ -21,9 +21,11 @@ public class slip25B extends JFrame implements ActionListener
             l1 = new JLabel("Employee number : ");
             l2 = new JLabel("Employee name : ");
             l3 = new JLabel("Salary : ");
+            l4 = new JLabel("Department : ");
             t1 = new JTextField(20);
             t2 = new JTextField(20);
             t3 = new JTextField(20);
+            t4 = new JTextField(20);
             b1 = new JButton("moveFirst");
             b2 = new JButton("moveNext");
             b3 = new JButton("movePrevious");
@@ -35,11 +37,12 @@ public class slip25B extends JFrame implements ActionListener
             p1.add(l1);p1.add(t1);
             p1.add(l2);p1.add(t2);
             p1.add(l3);p1.add(t3);
+            p1.add(l4);p1.add(t4);
             p2.add(b1);p2.add(b2);p2.add(b3);p2.add(b4);
             p1.setFont(f);
             p2.setFont(f);
             setFont(f);
-            p1.setLayout(new GridLayout(3,2));
+            p1.setLayout(new GridLayout(4,2));
             p2.setLayout(new GridLayout(1,4));
             c.add(p1);
             c.add(p2);
@@ -48,7 +51,7 @@ public class slip25B extends JFrame implements ActionListener
             b2.addActionListener(this);
             b3.addActionListener(this);
             b4.addActionListener(this);
-            setSize(400,400);
+            setSize(600,600);
             setVisible(true);
             setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -74,28 +77,32 @@ public class slip25B extends JFrame implements ActionListener
                 rs.first();
                 t1.setText(Integer.toString(rs.getInt(1)));
                 t2.setText(rs.getString(2));
-                t3.setText(rs.getString(3));
+                t3.setText(Integer.toString(rs.getInt(3)));
+                t4.setText(rs.getString(4));
             }
             if(e.getSource()==b2)
             {
                 rs.next();
                 t1.setText(Integer.toString(rs.getInt(1)));
                 t2.setText(rs.getString(2));
-                t3.setText(rs.getString(3));
+                t3.setText(Integer.toString(rs.getInt(3)));
+                t4.setText(rs.getString(4));
             }
             if(e.getSource()==b3)
             {
                 rs.previous();
                 t1.setText(Integer.toString(rs.getInt(1)));
                 t2.setText(rs.getString(2));
-                t3.setText(rs.getString(3));
+                t3.setText(Integer.toString(rs.getInt(3)));
+                t4.setText(rs.getString(4));
             }
             if(e.getSource()==b4)
             {
                 rs.last();
                 t1.setText(Integer.toString(rs.getInt(1)));
                 t2.setText(rs.getString(2));
-                t3.setText(rs.getString(3));
+                t3.setText(Integer.toString(rs.getInt(3)));
+                t4.setText(rs.getString(4));
             }
         }
         catch (Exception e1)
