@@ -20,7 +20,7 @@ else
 }
 
 const copyBuffer = Buffer.alloc(buffer1.length);
-buffer1.copy(copyBuffer)
+buffer1.copy(copyBuffer);
 
 
 console.log('Copied Buffer:',copyBuffer.toString());
