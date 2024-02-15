@@ -31,7 +31,7 @@ app.get('/',(req,res)=>{
 let ename = prompt("Enter the name of the employee : ");
 let usal = prompt("Enter the salary you want to update :");
 const q2 = `UPDATE emp SET sal = ? WHERE FullName = ?`;
-con.query(q2,[usal,ename],(err)=>{
+con.query(q2,[usal,ename],(err)=>{  // the values [usal,ename] get passed in ? in the query
     if(err)
     {
         throw err;
