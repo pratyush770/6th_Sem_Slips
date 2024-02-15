@@ -1,0 +1,1 @@
+This is an example of opening and reading a file in NodeJs
