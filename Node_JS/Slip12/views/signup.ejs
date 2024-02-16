@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/signup" method="POST" onsubmit="return validateForm()">
+        <h2>Enter the email : <input type="text" name="email" id="email"></h2>
+        <h2>Enter the password : <input type="text" name="pwd" id="pwd"></h2>
+        <input type="submit" value="Signup">
+    </form>
+    <br>
+    <a href="/login"><button>Go to Login</button></a>
+    <script>
+        function validateForm(){
+            var email = document.getElementById('email').value;
+            var pwd = document.getElementById('pwd').value;
+            var pwdLength = pwd.length;
+            if(email.indexOf('@')===-1)
+            {
+                alert("Email should contain one @ symbol");
+                return false;
+            }
+            if(pwdLength<8)
+            {
+                alert("Password must be of atleast 8 characters");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
