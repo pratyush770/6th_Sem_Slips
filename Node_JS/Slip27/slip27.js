@@ -3,10 +3,10 @@ const app = express();
 const port = 8080;
 const mysql = require('mysql');
 const path = require('path');
-app.set("view engine","ejs");
-app.set("views",path.join(__dirname,"/views"));
-app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.set("view engine","ejs");  // uses ejs as default view engine
+app.set("views",path.join(__dirname,"/views")); // uses view as feault directory
+app.use(express.json());  // used to get input from user from json or url
+app.use(express.urlencoded({extended:true}));  // used to get input from user from json or url
 const con = mysql.createConnection({
     host:'localhost',
     port:3307,
