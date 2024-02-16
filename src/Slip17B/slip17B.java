@@ -40,7 +40,7 @@ public class slip17B extends JFrame implements ActionListener
             setLayout(new GridLayout(2,1));
             setVisible(true);
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase","root","matsumoto");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/mydatabase","root","matsumoto");
             st = con.createStatement();
         }
         catch (Exception e)

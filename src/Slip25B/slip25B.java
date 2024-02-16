@@ -55,7 +55,7 @@ public class slip25B extends JFrame implements ActionListener
             setVisible(true);
             setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             Class.forName("com.mysql.cj.jdbc.Driver");
-            url = "jdbc:mysql://localhost:3306/mydatabase";
+            url = "jdbc:mysql://localhost:3307/mydatabase";
             uname ="root";
             pwd = "matsumoto";
             con = DriverManager.getConnection(url,uname,pwd);

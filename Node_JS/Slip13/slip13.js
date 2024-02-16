@@ -18,7 +18,7 @@ con.connect(function(err){
  function createDatabaseAndTable(){
     const q = `CREATE DATABASE IF NOT EXISTS studentdb;
     USE studentDB;
-    CREATE TABLE IF NOT EXISTS student(
+    CREATE TABLE IF NOT EXISTS student1(
             rno INT PRIMARY KEY,
             sname VARCHAR(45),
             per INT

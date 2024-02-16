@@ -7,7 +7,7 @@ public class slip10A
 	{
 		int count = 0;
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		String database = "jdbc:mysql://localhost:3306/mydatabase";
+		String database = "jdbc:mysql://localhost:3307/mydatabase";
 		String username = "root";
 		String password = "matsumoto";
 		Connection con = DriverManager.getConnection(database,username,password);

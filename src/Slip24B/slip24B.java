@@ -42,7 +42,7 @@ public class slip24B extends JFrame implements ActionListener
                 setVisible(true);
                 setLayout(new GridLayout(5, 2));
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                url = "jdbc:mysql://localhost:3306/mydatabase";
+                url = "jdbc:mysql://localhost:3307/mydatabase";
                 user = "root";
                 pass = "matsumoto";
                 con = DriverManager.getConnection(url, user, pass);

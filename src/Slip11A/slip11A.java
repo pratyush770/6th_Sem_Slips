@@ -7,7 +7,7 @@ public class slip11A
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/mydatabase";
+            String url = "jdbc:mysql://localhost:3307/mydatabase";
             String uname = "root";
             String pwd = "matsumoto";
             Connection con = DriverManager.getConnection(url,uname,pwd);
