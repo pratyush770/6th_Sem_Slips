@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/employee" method="POST" onsubmit="return validateForm()">
+        <h2>Enter the date of birth of employee in words(date/month/year) <input type="text" name="dob" id="dob"></h2>
+        <h2>Enter the date of joining of employee in words(date/month/year) <input type="text" name="doj" id="doj"></h2>
+        <h2>Enter the salary of the employee <input type="text" name="sal" id="sal"></h2>
+        <input type="submit" value="Store and Display">
+    </form>
+    <script>
+        function validateForm(){
+            var dob = document.getElementById('dob').value;
+            var doj = document.getElementById('doj').value;
+            var sal = document.getElementById('sal').value;
+            var salLength = sal.length;
+            if(dob==='')
+            {
+                alert("Date of birth should not be empty");
+                return false;
+            }
+            if(doj==='')
+            {
+                alert("Date of joining should not be empty");
+                return false;
+            }
+            if(salLength<=0)
+            {
+                alert("Salary should be greater than 0");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
