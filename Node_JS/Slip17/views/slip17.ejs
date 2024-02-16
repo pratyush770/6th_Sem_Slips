@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Salary</th>
+        </thead>
+        <tbody>
+            <% for (detail of details){ %>
+                <tr>
+                    <td><%= detail.eid %></td>
+                    <td><%= detail.FullName %></td>
+                    <td><%= detail.sal %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
