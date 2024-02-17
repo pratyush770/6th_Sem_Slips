@@ -9,7 +9,7 @@ public class Slip8B extends GenericServlet
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/mydatabase";
+            String url = "jdbc:mysql://localhost:3307/mydatabase";
             String user = "root";
             String pwd = "matsumoto";
             Connection con = DriverManager.getConnection(url,user,pwd);
