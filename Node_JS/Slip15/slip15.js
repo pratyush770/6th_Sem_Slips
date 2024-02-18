@@ -32,7 +32,24 @@ app.get('/',(req,res)=>{
         }
         const totalCount = result[0].total_records;
         console.log("The total count is : "+ totalCount);
-        res.render("teacher",{totalCount});
+        res.send("Record inserted successfully");
+    });
+});
+app.get('/add',(req,res)=>{
+    res.render("add");
+});
+app.post('/new',(req,res)=>{
+    const q2 = "INSERT INTO teacher VALUES(?,?,?)";
+    const tid = req.body.tid;
+    const tname = req.body.tname;
+    const sal = req.body.sal;
+    con.query(q2,[tid,tname,sal],(err)=>{
+        if(err)
+        {
+            console.error(err);
+        }
+        console.log("Record inserted successfully");
+        res.redirect("teacher.ejs");
     });
 });
 app.get('/view',(req,res)=>{
