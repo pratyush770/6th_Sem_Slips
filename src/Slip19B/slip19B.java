@@ -50,4 +50,3 @@ public class slip19B extends Applet implements Runnable
 <applet code="slip19B" height="500" width="500">
 </applet>
  */
-
