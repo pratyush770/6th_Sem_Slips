@@ -1,4 +1,3 @@
-package Slip11B;
 import java.io.*;
 import javax.servlet.*;
 public class Slip11B extends GenericServlet
