@@ -45,9 +45,9 @@ public class slip26B extends JFrame implements ActionListener
             l2.setFont(new Font("Arial",Font.BOLD,20));
             add(l2);
             endDate = new JTextField();
-            endDate .setBounds(560,50,200,50);
-            endDate .setFont(new Font("Arial",Font.PLAIN,18));
-            add(endDate );
+            endDate.setBounds(560,50,200,50);
+            endDate.setFont(new Font("Arial",Font.PLAIN,18));
+            add(endDate);
 
             b1 = new JButton("Display");
             b1.setBounds(610,670,150,50);
