@@ -1,7 +1,7 @@
 const fs = require("fs"); // file system module which is in-built
 
 // synchronous call returns value
-// synchronous call never returns value
+// asynchronous call never returns value
 
 
 // synchronous call for writing data into file
@@ -47,3 +47,16 @@ const fs = require("fs"); // file system module which is in-built
 // synchronous call for making a directory
 // fs.mkdirSync("my-docs");   // creates a directory named my-docs
 // fs.mkdirSync("my-doc/pratyush/nodejs",{recursive:true});   // creates a directory with subdirectories
+
+// open a file 
+// fs.open("a.txt",'r',function (err,f)
+// {
+//     if(err)
+//     {
+//         console.error(err);
+//     }
+//     else
+//     {
+//         console.log(f);
+//     }
+// });
