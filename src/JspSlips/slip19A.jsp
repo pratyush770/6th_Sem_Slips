@@ -15,16 +15,16 @@
         ch = n.charAt(i);
         switch(ch)
         {
-            case '0':out.print(" Zero ");break;
-            case '1':out.print(" One ");break;
-            case '2':out.print(" Two ");break;
-            case '3':out.print(" Three ");break;
-            case '4':out.print(" Four ");break;
-            case '5':out.print(" Five ");break;
-            case '6':out.print(" Six ");break;
-            case '7':out.print(" Seven ");break;
-            case '8':out.print(" Eight ");break;
-            case '9':out.print(" Nine ");break;
+            case '0':out.print("<font color='red'> Zero ");break;
+            case '1':out.print("<font color='red'> One ");break;
+            case '2':out.print("<font color='red'> Two ");break;
+            case '3':out.print("<font color='red'> Three ");break;
+            case '4':out.print("<font color='red'> Four ");break;
+            case '5':out.print("<font color='red'> Five ");break;
+            case '6':out.print("<font color='red'> Six ");break;
+            case '7':out.print("<font color='red'> Seven ");break;
+            case '8':out.print("<font color='red'> Eight ");break;
+            case '9':out.print("<font color='red'> Nine ");break;
         }
     }
     %>
