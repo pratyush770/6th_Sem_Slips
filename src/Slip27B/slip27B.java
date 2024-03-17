@@ -8,7 +8,6 @@ public class slip27B extends Applet implements ActionListener,Runnable
     Thread t = null;
     TextField t1;
     Button b1,b2;
-    Date d;
     public void init()
     {
         try
